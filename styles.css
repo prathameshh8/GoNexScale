@@ -213,6 +213,139 @@ h2 {
     .cta-button { padding: 1rem 2rem; font-size: 1rem; }
 }
 
+/* Economy Comparison Section */
+.economy-section {
+    padding: 8rem 0;
+    background: rgba(255,255,255,0.02);
+}
+
+.economy-intro {
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.economy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.economy-col {
+    padding: 3rem 2.5rem;
+}
+
+.economy-col.dim {
+    background: rgba(255,255,255,0.02);
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.economy-col.bright {
+    background: rgba(255,255,255,0.05);
+}
+
+.economy-col-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.economy-col.dim .economy-col-label {
+    color: var(--gray);
+    opacity: 0.35;
+}
+
+.economy-col.bright .economy-col-label {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.economy-col-title {
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.economy-col.dim .economy-col-title {
+    color: var(--gray);
+    opacity: 0.45;
+}
+
+.economy-col.bright .economy-col-title {
+    color: var(--white);
+}
+
+.economy-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.economy-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 1.4rem;
+    position: relative;
+}
+
+.economy-col.dim .economy-list li {
+    color: var(--gray);
+    opacity: 0.4;
+}
+
+.economy-col.dim .economy-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+}
+
+.economy-col.bright .economy-list li {
+    color: var(--gray);
+    opacity: 0.85;
+}
+
+.economy-col.bright .economy-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--white);
+}
+
+.economy-callout {
+    max-width: 760px;
+    margin: 3rem auto 0;
+    text-align: center;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .economy-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .economy-col.dim {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .economy-col {
+        padding: 2.5rem 1.75rem;
+    }
+}
+
 /* Calendly Section */
 .calendly-wrapper {
     margin-top: 3rem;
